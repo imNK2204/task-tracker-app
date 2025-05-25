@@ -75,7 +75,7 @@ jobs:
         EOF'
         docker buildx build \
           --platform linux/amd64,linux/arm64,linux/arm/v7 \
-          -t modustech/modusgo:TaskTrackerApp-latest \
+          -t ${{ secrets.DOCKER_HUB_USERNAME }}/nkdev:TaskTrackerApp-latest \
           --push \
           -f Dockerfile \
           .
